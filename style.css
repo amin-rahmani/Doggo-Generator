@@ -1,0 +1,26 @@
+html {
+  border: 2px solid red;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(lightyellow, orange);
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+
+select {
+  font-size: 1.1rem;
+}
+
+.section-container {
+    display: flex;
+    border: 2px solid blue;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.column {
+    border: 2px solid black;
+}
