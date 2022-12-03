@@ -1,10 +1,8 @@
 html {
-  border: 2px solid red;
   font-size: 2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background: linear-gradient(lightyellow, orange);
   height: 100vh;
-  width: 100vw;
 }
 
 header {
@@ -25,8 +23,8 @@ select {
   flex: 1;
 }
 img {
-  max-width: 900px;
-  max-height: 700px;
+  max-width: 400px;
+  max-height: 500px;
 }
 
 span {
@@ -36,7 +34,7 @@ span {
 }
 
 #dog-name {
-  font-size:2rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 
