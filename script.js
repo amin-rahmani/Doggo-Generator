@@ -18,3 +18,12 @@ fetch(BREEDS_URL)
             select.appendChild(option) // now we added to select tag in html
         }
     })
+
+    select,addEventListener('change' , event => {
+        // console.log(event);
+        // console.log(event.target);
+        // console.log(event.target.value);
+        let url = `https://dog.ceo/api/breed/${event.target.value}/image/random`
+        // console.log(url);
+        
+    })
