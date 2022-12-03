@@ -11,4 +11,10 @@ fetch(BREEDS_URL)
         const breedsArray = Object.keys(breedsObject) // turn the object into an array
         // console.log(breedsArray);
         // console.log(breedsObject);
+        for (let i=0;i<breedsArray.length;i++){
+            const option = document.createElement('option') //<option></option>
+            option.value = breedsArray[i] //<option value='breed'> </option>
+            option.innerText = breedsArray[i] //<option value='breedName'>breedsArray[i]</option>
+            select.appendChild(option) // now we added to select tag in html
+        }
     })
