@@ -29,6 +29,7 @@ select, addEventListener('change', event => {
     doggoInfo.assignMF()
     doggoInfo.assignAge()
     doggoInfo.assignLikes()
+    doggoInfo.assignDisLikes()
 })
 
 const img = document.querySelector('.dog-img')
@@ -96,7 +97,11 @@ const doggoInfo = {
 
     assignLikes(){
         this.likes = this.yatesShuffle(this.likesList).slice(0,2)
-        document.getElementById('likes').innerHTML = `likes : ${this.likes[0]} ${this.likes[1]}`
-    }
+        document.getElementById('likes').innerHTML = `Likes : ${this.likes[0]} ${this.likes[1]}`
+    },
+    assignDisLikes(){
+        this.dislikes = this.yatesShuffle(this.dislikesList).slice(0,2)
+        document.getElementById('dislikes').innerHTML = `Dislikes : ${this.dislikes[0]} ${this.dislikes[1]}`
+    },
 
 }
