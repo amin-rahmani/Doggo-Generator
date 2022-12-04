@@ -30,6 +30,7 @@ select, addEventListener('change', event => {
     doggoInfo.assignAge()
     doggoInfo.assignLikes()
     doggoInfo.assignDisLikes()
+    doggoInfo.assignFunFact()
 })
 
 const img = document.querySelector('.dog-img')
@@ -81,12 +82,12 @@ const doggoInfo = {
         document.getElementById('age').innerHTML = `Age: ${this.age}`
     },
 
-    yatesShuffle(array){
-        let m = array.length , t,i;
+    yatesShuffle(array) {
+        let m = array.length, t, i;
         //while ther remain elements to shufle...
-        while(m){
+        while (m) {
             //pick a remaining element...
-            i = Math.floor(Math.random()* m--);
+            i = Math.floor(Math.random() * m--);
             //and swap it with the current element.
             t = array[m];
             array[m] = array[i];
@@ -95,13 +96,18 @@ const doggoInfo = {
         return array;
     },
 
-    assignLikes(){
-        this.likes = this.yatesShuffle(this.likesList).slice(0,2)
+    assignLikes() {
+        this.likes = this.yatesShuffle(this.likesList).slice(0, 2)
         document.getElementById('likes').innerHTML = `Likes : ${this.likes[0]} ${this.likes[1]}`
     },
-    assignDisLikes(){
-        this.dislikes = this.yatesShuffle(this.dislikesList).slice(0,2)
+    assignDisLikes() {
+        this.dislikes = this.yatesShuffle(this.dislikesList).slice(0, 2)
         document.getElementById('dislikes').innerHTML = `Dislikes : ${this.dislikes[0]} ${this.dislikes[1]}`
     },
+
+    assignFunFact() {
+        this.fact = this.factList[Math.floor(Math.random() * this.factList.length)]
+        document.getElementById('fun-fact').innerHTML = `Additional Info: ${this.fact}`
+    }
 
 }
