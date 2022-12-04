@@ -27,6 +27,8 @@ select, addEventListener('change', event => {
     // console.log(url);
     getDoggoImg(url);
     doggoInfo.assignMF()
+    doggoInfo.assignAge()
+    doggoInfo.assignLikes()
 })
 
 const img = document.querySelector('.dog-img')
@@ -77,4 +79,24 @@ const doggoInfo = {
         this.age = Math.floor(Math.random() * 16 + 1)
         document.getElementById('age').innerHTML = `Age: ${this.age}`
     },
+
+    yatesShuffle(array){
+        let m = array.length , t,i;
+        //while ther remain elements to shufle...
+        while(m){
+            //pick a remaining element...
+            i = Math.floor(Math.random()* m--);
+            //and swap it with the current element.
+            t = array[m];
+            array[m] = array[i];
+            array[i] = t;
+        }
+        return array;
+    },
+
+    assignLikes(){
+        this.likes = this.yatesShuffle(this.likesList).slice(0,2)
+        document.getElementById('likes').innerHTML = `likes : ${this.likes[0]} ${this.likes[1]}`
+    }
+
 }
